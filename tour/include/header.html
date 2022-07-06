@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하나투어 : 꿈꾸는 대로, 펼쳐지다. </title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="images/hanatour_logo_s.png" type="image/x-icon">
+
+    
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.6/swiper-bundle.css" integrity="sha512-LTz09eiSkjtMayQgsyCcxuA2POUuvwdJoejrNLLIj5tulySAEAFgRHXW5JO4/qW36nurH8iApZ4SMj9E2rRHtQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  
+    <script>
+        $(document).ready(function(){
+             var slide = $(".sec01slide").bxSlider({
+             controls: false,
+             pagerCustom:".sec01slideTap",
+             mode:"vertical",
+             touchEnabled: false,
+             infiniteLoop:false
+       });
+
+        $("#sdate01,#edate01,#sdate02,#edate02,#sdate03,#edate03,#sdate04,#edate04").datepicker({
+             dateFormat:'yy/mm/dd',
+             dateFormat: 'yy/mm/dd',
+             prevText: '이전 달',
+             nextText: '다음 달',
+             monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+             monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+             dayNames: ['일','월','화','수','목','금','토'],
+             dayNamesShort: ['일','월','화','수','목','금','토'],
+             dayNamesMin: ['일','월','화','수','목','금','토'],
+             showMonthAfterYear: true,
+             changeMonth: true,
+             changeYear: true,
+             yearSuffix: '년'
+        })
+    });
+
+    </script>
+</head>
+<body>
+    <header>
+        <div class="hdWrap">
+            <div class="hdTopWrap">
+                <div class="hdTop">
+                    <div class="logo">
+                        <a href="./">
+                            <img src="images/hanatour_logo.png" alt="" >
+                        </a>
+                    </div>
+                    <div class="search">
+                        <form action="#">
+                            <input type="text" name="search" placeholder="여행지를 검색하세요"  class="inp">
+                        </form>
+                        <p class="sTitle">Search</p>
+                        <div class="icon">
+                            <i class="fa-regular fa-dolphin"></i>
+                        </div>
+                    </div>
+                    <div class="snsbox">
+                        <ul>
+                            <li><img src="images/youtube.png" alt=""></li>
+                            <li><img src="images/instagram.png" alt=""></li>
+                            <li><img src="images/facebook.png" alt=""></li>
+                            <li><img src="images/kakaostory.png" alt=""></li>
+                            <li><img src="images/naverblog.png" alt=""></li>
+                        </ul>
+                    </div>
+            </div>
+            </div>
+            <div class="navbar" >
+                <ul>                      
+                    <li><a href="sub01.html" <?php if($menu==1){?> class="active"<? }?>>해외여행</a></li>
+                    <li><a href="sub02.html" <?php if($menu==2){?> class="active"<? }?>>국내여행</a></li>
+                    <li><a href="sub03.html" <?php if($menu==3){?> class="active"<? }?>>항공</a></li>
+                    <li><a href="sub04.html" <?php if($menu==4){?> class="active"<? }?>>호텔/펜션</a></li>
+                    <li><a href="sub05.html" <?php if($menu==5){?> class="active"<? }?>>허니문</a></li>
+                </ul>
+                <div class="enter">
+                    <a href="#">로그인</a>
+                    <a href="#">회원가입</a>
+                    <a href="#">고객센터</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
